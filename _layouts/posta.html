@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<article class="post">
+  <h1>{{ page.title }}</h1>
+
+  <span class="outline" style="float: right">
+    <!-- <h3>Outline</h3> -->
+    <b>What we need</b>
+    <ul>
+      {% assign reqs = page.reqs | split:', ' | sort %}
+      {% for r in reqs %}
+        <li>{{r}}</li>
+      {% endfor %}
+    </ul>
+    <b>OS</b>
+    <ul>
+      <li>{{ page.platform }}</li>
+    </ul>
+    <b>Tags</b>
+  </p>
+    <span>
+      {% for tag in page.tags %}
+        {% capture tag_name %}{{ tag }}{% endcapture %}
+        <a href="/tag/{{ tag_name }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
+      {% endfor %}
+    </span>
+  </span>
+  
+  <div class="entry">
+    {{ content }}
+  </div>
+
+  <div class="date">
+    Written on {{ page.date | date: "%B %e, %Y" }}
+  </div>
+
+  {% include disqus.html %}
+</article>
+  
