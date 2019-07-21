@@ -253,12 +253,13 @@ nav {
 
 .post {
   blockquote {
+    background: #1E1E1E;
     margin: 1.8em .8em;
-    border-left: 2px solid $gray;
+    border-left: 1em solid #1C507D;
     padding: 0.1em 1em;
     color: $gray;
-    font-size: 22px;
-    font-style: italic;
+    font-size: 14px;
+    color: #D3D3D3;
   }
 
   .comments {
@@ -294,6 +295,7 @@ footer {
   border-top: 4px solid lightgrey;
   border-bottom: 1px solid lightgrey;
   font-size: 12px;
-  margin-left: 5px;
+  margin-bottom: 1em;
+  margin-left: 1em;
   padding: 5px 5px 5px 5px;
 }

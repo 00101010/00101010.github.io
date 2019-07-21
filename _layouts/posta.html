@@ -9,7 +9,7 @@ layout: default
     <!-- <h3>Outline</h3> -->
     <b>What we need</b>
     <ul>
-      {% assign reqs = page.reqs | split:', ' | sort %}
+      {% assign reqs = page.reqs | split:', ' | sort_natural %}
       {% for r in reqs %}
         <li>{{r}}</li>
       {% endfor %}
